@@ -14,7 +14,7 @@ body{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     height: 40px;
     color: white;
 }
