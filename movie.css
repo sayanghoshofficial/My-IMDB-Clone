@@ -1,7 +1,7 @@
 /* css for body */
 body{
     margin: 0;
-    background-image: url(image/bg.jpg);
+    background-image: url(image/bg2.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -51,6 +51,7 @@ body{
     align-items: center;
     justify-content: space-around;
     background-image: linear-gradient(273deg, blue, purple);
+    opacity: 1;
     box-shadow: 4px 4px 9px 2px;
     padding: 1%;
 }

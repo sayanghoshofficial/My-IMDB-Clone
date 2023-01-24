@@ -1,3 +1,13 @@
+/* css for body */
+body{
+    margin: 0;
+    background-image: url(image/bg3.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    min-width: 400px;
+}
 /* add style for movie list */
 .movie-list{
     display: flex;
