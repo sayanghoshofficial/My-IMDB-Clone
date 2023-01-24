@@ -1,0 +1,89 @@
+/* css for body */
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+    min-width: 400px;
+}
+/* css for nav bar */
+.nav-bar{
+    display: flex;
+    background-color: #121212;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    color: white;
+}
+.nav-bar > img{
+    width: 80px;
+}
+.nav-bar > input{
+    width: 50%;
+    height: 25px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 18px;
+}
+.nav-bar > i:hover{
+    color: yellowgreen;
+}
+.nav-bar > button{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.nav-bar > button:hover{
+    color: blue;
+}
+/* css for movie content */
+.movie-content{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(273deg, blue, purple);
+    box-shadow: 4px 4px 9px 2px;
+    padding: 1%;
+}
+.movie-content :hover{
+    color: yellow;
+    transition: transform 1s ease-in-out;
+    transform: scale(1.1);
+}
+#poster{
+    width: 50%;
+    height: 100%;
+}
+#description{
+    width: 78%;
+    margin-left: 40px;
+    margin-right: 10px;
+    color: #4eef4e;
+} 
+/* add media quary to make the web page responsive */
+@media only screen and (max-width: 1100px){  
+    .movie-content{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 1000px){  
+    .movie-content{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 900px){  
+    .movie-content{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px){  
+    .movie-content{
+        flex-direction: column;
+    }
+}
