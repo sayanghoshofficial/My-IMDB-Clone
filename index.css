@@ -1,7 +1,10 @@
 /* css for body */
 body{
     margin: 0;
-    background-color: black;
+    background-image: url(image/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     color: white;
     min-width: 400px;
 }

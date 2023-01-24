@@ -94,7 +94,7 @@ function handledClickListener(e){
         const id = target.id;
         console.log(id);
         saveArrayToLocalStorage(id);
-        showNotification('Movie added to your fevourite List.......')
+        showNotification('Movie added to your favourite List.......')
        }
     // click to go to fevourite page
     if(target.className === 'button'){
