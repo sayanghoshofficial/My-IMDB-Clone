@@ -40,7 +40,7 @@ function movieHomePage(responseData){
     <h4>${responseData.Language}</h4>
     <h3>${responseData.Director}</h3>
     <h3>${responseData.Actors}</h3>
-    <button class="add-fev" id="${responseData.imdbID}">Add fevorite</i></button>
+    <button class="add-fev" id="${responseData.imdbID}">Add favorite</i></button>
     <button class="view-details" id="${responseData.imdbID}">View Details</button>
 
     `
@@ -114,13 +114,12 @@ var movieName = ["The Shawshank Redemption","The Godfather","The Dark Knight","T
 "The Lord of the Rings: The Two Towers","Inception","The Empire Strikes Back","The Matrix","GoodFellas",
 "Se7en","The Silence of the Lambs","Cidade de Deus","Saving Private Ryan","La vita è bella",
 "Interstellar","The Green Mile","Star Wars","Terminator 2: Judgment Day","Back to the Future",
-"The Pianist","Psycho","Gisaengchung",
-"Léon","The Lion King","Gladiator","American History X","The Departed","The Usual Suspects","The Prestige","Whiplash",
-"Casablanca","Hotaru no haka","Seppuku","The Intouchables","Modern Times","Once Upon a Time in the West","Rear Window",
-"Alien","City Lights","Apocalypse Now","Memento","Django Unchained","Raiders of the Lost Ark",
-"WALL·E","The Lives of Others ","Sunset Blvd","Paths of Glory","The Shining","The Great Dictator",
-"Avengers: Infinity War","Witness for the Prosecution","Aliens","Spider-Man: Into the Spider-Verse","American Beauty",
-"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","The Dark Knight Rises",
+"The Pianist","Psycho","Gisaengchung","Léon","The Lion King","Gladiator","American History X","The Departed",
+"The Usual Suspects","The Prestige","Whiplash","Casablanca","Hotaru no haka","Seppuku","The Intouchables",
+"Modern Times","Once Upon a Time in the West","Rear Window","Alien","City Lights","Apocalypse Now","Memento",
+"Django Unchained","Raiders of the Lost Ark","WALL·E","The Lives of Others ","Sunset Blvd","Paths of Glory","The Shining",
+"The Great Dictator","Avengers: Infinity War","Witness for the Prosecution","Aliens","Spider-Man: Into the Spider-Verse",
+"American Beauty","Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","The Dark Knight Rises",
 "Inglourious Basterds","Amadeus","Coco","Toy Story","Joker","Braveheart","Das Boot","Avengers: Endgame",
 "Once Upon a Time in America","Good Will Hunting","Kimi no Na wa","Requiem for a Dream","3 Idiots",
 "Toy Story 3","Tengoku to jigoku","Star Wars: Episode VI - Return of the Jedi ","Eternal Sunshine of the Spotless Mind",
