@@ -13,6 +13,8 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    position: fixed;
     height: 40px;
     color: white;
 }
