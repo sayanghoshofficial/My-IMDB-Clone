@@ -1,6 +1,7 @@
 const apikey = "c9c05ce6"
 var arr = JSON.parse(localStorage.getItem("data"));
-localStorage.clear();
+localStorage.removeItem("data");
+localStorage.setItem('data', '[]');
 const movieList = document.getElementsByClassName('movie-list');
 localStorage.setItem('data', JSON.stringify(arr));
 
@@ -71,7 +72,7 @@ function fevMoviePage(responseData){
         <p>${responseData.Title} (${responseData.Year})</p>
         <p>Language:${responseData.Language}</p>
        
-        <button class="remove-fev" id=${responseData.imdbID}>Remove Favorite</button>
+        <button class="remove-fev" id=${responseData.imdbID}><i class="fa-solid fa-trash-can"></i>Remove Favorite</button>
     </div>
     `
     movieList[0].appendChild(movieDiv);
@@ -109,16 +110,23 @@ function updateLocalStorage(id){
 //add eventListener
 function handledClickListener(e){
     const target = e.target;
-    if(target.className === 'remove-fev'){
+    if(target.className === 'remove-fev' || target.className === 'fa-solid fa-trash-can'){
         const id = target.id;
         removeFevoriteFromArray(id);
         showNotification('Movie delete from your fevourite list...')
     }
-    if(target.className === 'remove-all'){
-        localStorage.removeItem("data");
-        localStorage.setItem('data', '[]');
-        reloadPage();
-        showNotification('all Item deleted....')
+    if(target.className === 'remove-all' || target.className === 'fa-solid fa-eraser'){
+        var arr2 = JSON.parse(localStorage.getItem("data"));
+        if(arr2.length > 0){
+            localStorage.removeItem("data");
+            localStorage.setItem('data', '[]');
+            reloadPage();
+            showNotification('all Item deleted....')
+        }else{
+            showNotification('You already deleted All......');
+            return;
+        }
+        
     }
     if(target.className === 'button' || target.className === 'fa-solid fa-house-user'){
         window.open("index.html");

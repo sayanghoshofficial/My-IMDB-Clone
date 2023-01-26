@@ -17,9 +17,10 @@ body{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    /* position: fixed; */
     height: 40px;
     color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .nav-bar > img{
     width: 100px;
@@ -31,21 +32,28 @@ body{
     width: 100%;
     height: 25px;
     background-color: transparent;
-   
-   
 }
 #from{
     width: 50%;
 }
-.input-div > input{
+.input-div{
     position: relative;
-    /* top: 8px; */
     width: 100%;
-    height: 20px;
+    height: 30px;
     background-color: transparent;
-    color: white;
     border: 1px solid white;
     border-radius: 18px;
+}
+.input-div >input{
+    padding-left: 30px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+
 }
 .nav-bar > i:hover{
     color: yellowgreen;
@@ -65,8 +73,8 @@ ul{
 .list{
     display: flex;
     position: fixed;
-    left: 25%;
-    top: 24px;
+    left: 31%;
+    top: 43px;
     flex-direction: column;
     width: 300px;
     margin-left: auto;
@@ -79,7 +87,6 @@ ul{
     opacity: .5;
 }
 .list-items:hover{
-    /* border-bottom: 1px solid white; */
     color: darkgreen;
     background-color: greenyellow;
 }
@@ -93,26 +100,33 @@ ul{
     width: 100%;
     height: auto;
 }
+.starRating{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
 .movie-box{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
-    
+    margin-top: 40px;
     box-shadow: -5px 5px 9px -3px;
-    border-radius: 0% 0% 5% 5%;
+    border-radius: 15px;
     background-image: linear-gradient(273deg, blue, purple);
     width: 20%;
     min-width: 300px;
     height: 400px;
     font-size: xx-small;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .movie-box > img{
     height: 50%;
-    width: 100%;
+    width: 90%;
 }
 .movie-box > button{
     background-color: transparent;
@@ -120,6 +134,10 @@ ul{
     border: none;
     font-size: small;
     font-weight: 1000;
+}
+.rating{
+    color: rgb(0, 255, 21);
+    font-size: 30px;
 }
 .movie-box :hover{
     color: yellow;

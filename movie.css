@@ -46,20 +46,28 @@ body{
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 5%;
+    border-radius: 30px;
+    margin-top: 40px;
     width: 70%;
     flex-direction: row;
     align-items: center;
+    text-align: center;
+    padding: 25px;
     justify-content: space-around;
-    background-image: linear-gradient(273deg, blue, purple);
+    /* background-image: linear-gradient(273deg, blue, purple); */
+    background-color: blue;
     opacity: 1;
     box-shadow: 4px 4px 9px 2px;
-    padding: 1%;
+    /* padding: 1%; */
 }
 .movie-content :hover{
     color: yellow;
     transition: transform 1s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.08);
+}
+.ratings{
+    color: rgb(222, 9, 230);
+    font-size: 30px;
 }
 #poster{
     width: 50%;
@@ -69,7 +77,10 @@ body{
     width: 78%;
     margin-left: 40px;
     margin-right: 10px;
-    color: #4eef4e;
+    /* text-align: center; */
+    color: #08f714;
+    padding-left: 10px;
+    padding-right: 15px;
 } 
 /* add media quary to make the web page responsive */
 @media only screen and (max-width: 1100px){  

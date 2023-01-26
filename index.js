@@ -36,12 +36,12 @@ function movieHomePage(responseData){
     movieDiv.id = responseData.imdbID;
     movieDiv.innerHTML = `
     <img src="${responseData.Poster}">
-    <h1>${responseData.Title} (${responseData.Year})</h1>
+    <h1>${responseData.Title} (${responseData.Year})  <img class="starRating" src="image/star.png"/><span class="rating">${responseData.imdbRating}</span></h1>
     <h4>${responseData.Language}</h4>
     <h3>${responseData.Director}</h3>
     <h3>${responseData.Actors}</h3>
-    <button class="add-fev" id="${responseData.imdbID}">Add favorite</i></button>
-    <button class="view-details" id="${responseData.imdbID}">View Details</button>
+    <button class="add-fev" id="${responseData.imdbID}"><i class="fa-solid fa-heart"></i>Add favorite</i></button>
+    <button class="view-details" id="${responseData.imdbID}"><i class="fa-solid fa-circle-info"></i></i>View Details</button>
 
     `
     movieArea[0].appendChild(movieDiv);
@@ -71,8 +71,15 @@ function saveArrayToLocalStorage(id){
         localStorage.setItem('data', '[]');
     }
     var localArray = JSON.parse(localStorage.getItem('data'));
-    localArray.push(id);
-    localStorage.setItem('data', JSON.stringify(localArray));
+    if(!localArray.includes(id)){
+        localArray.push(id);
+        localStorage.setItem('data', JSON.stringify(localArray));
+        showNotification('Movie added to your favourite List.......')
+    }else{
+        showNotification('Movie already added to your favourite List.......')
+        return;
+    }
+   
 }
 //add eventListener
 function handledClickListener(e){
@@ -84,16 +91,16 @@ function handledClickListener(e){
         removeElements();
     }
     // click to view details
-    if(target.className === 'view-details'){
+    if(target.className === 'view-details' || target.className === 'fa-solid fa-circle-info'){
         const id = target.id;
         localStorage.setItem("imdbid",id);
         window.open("movie.html", "_blank");
        }
     // click to add fevourite List
-    if(target.className === 'add-fev'){
+    if(target.className === 'add-fev' || target.className === 'fa-solid fa-heart'){
         const id = target.id;
         saveArrayToLocalStorage(id);
-        showNotification('Movie added to your favourite List.......')
+        
        }
     // click to go to fevourite page
     if(target.className === 'button'){
@@ -137,8 +144,7 @@ var movieName = ["The Shawshank Redemption","The Godfather","The Dark Knight","T
 "Elektra","Elf","The Emoji Movie","Enchanted","Ender's Game","Entourage","Everest","Everyone's Hero","Ex Machina","Friday the 13th","Funny Games",
 "Final Destination","Fear","Freddy vs. Jason","Final Examination","Firewall","Finding Nemo","G.I. Joe: The Rise of Cobra ","Gangs of New York",
 "Ghostbusters","Ghost Rider","Ghost Rider: Spirit of Vengeance","Godzilla","Godzilla vs Kong","Haven","Home Alone 3","Home Alone 2","Home Alone",
-"Hocus Pocus","Hook","Harry Potter","Hide and Seek","Harry Potter and the Goblet of Fire","Hellraiser: Deader","Harry Potter and the Deathly Hallows - Part 1",
-"I've Been Waiting for You","Invincible","Indiana Jones and the Kingdom of the Crystal Skull","Jack and Jill","Jackass Number Two","Jackass 3D",
+"Hocus Pocus","Hook","Harry Potter","Hide and Seek","Harry Potter and the Goblet of Fire","Hellraiser: Deader","Harry Potter and the Deathly Hallows - Part 1","Invincible","Indiana Jones and the Kingdom of the Crystal Skull","Jack and Jill","Jackass Number Two","Jackass 3D",
 "Jackie Brown","Jack Reacher","Jack Reacher: Never Go Back","Jack Ryan: Shadow Recruit","Jack the Giant Slayer","Jason Bourne","Jaws","Killing Moon",
 "King Kong","Keeping Mum","Knock Knock","Killing Mr. Griffin","Kicked in the Head","Kindergarten Cop","Killers in the House","Krrish",
 "Krrish 3","Koi... Mil Gaya","Laaj","Laal Singh Chaddha","La La Land","Land of the Dead","Lambada","Lady in the Water","Living Death","Leprechaun 5: In the Hood",

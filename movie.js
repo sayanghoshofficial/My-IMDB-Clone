@@ -50,14 +50,12 @@ function movieDetailsPage(responseData){
     <div id="description">
         <h1>${responseData.Title}(${responseData.Year})</h1>
         <span> 
-            Year: ${responseData.Year},
             Rated: ${responseData.Rated},
-            Release: ${responseData.release},
             Runtime: ${responseData.Runtime}
-            <p> 
-                imdbRating: ${responseData.imdbRating},
-                imdbVotes: ${responseData.imdbVotes},
-                BoxOffice: ${responseData.BoxOffice}
+            <p class="ratings"> 
+                <i class="fa-solid fa-star"></i> ${responseData.imdbRating},
+                <i class="fa-solid fa-person-circle-check"></i> ${responseData.imdbVotes},
+                <i class="fa-solid fa-sack-dollar"></i> ${responseData.BoxOffice}
             </p>
         </span>
         <p>Country: ${responseData.Country}</p>
@@ -67,7 +65,7 @@ function movieDetailsPage(responseData){
         <p>Director: ${responseData.Director}</p>
         <p>Genre: ${responseData.Genre}</p>
         <p>Awards: ${responseData.Awards}</p>
-        <p>Plot:</br>
+        <p>Plot:
             ${responseData.Plot}
         </p>
     <div>
