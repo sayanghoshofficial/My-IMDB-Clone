@@ -1,7 +1,6 @@
 const apikey = "c9c05ce6"
 var arr = JSON.parse(localStorage.getItem("data"));
 localStorage.clear();
-console.log(arr);
 const movieList = document.getElementsByClassName('movie-list');
 localStorage.setItem('data', JSON.stringify(arr));
 
@@ -37,9 +36,7 @@ function saveArrayToLocalStorage(id){
 }
 //create url
 function movieDetails(movieId){
-    // console.log('inside moviedetails 116',movieId);
     var url = "http://www.omdbapi.com/?i="+movieId+"&apikey="+apikey;
-    // console.log(url);
     fetchDataFromApiforDetails(url);
     url = ''
 }
@@ -101,14 +98,12 @@ function updateLocalStorage(id){
     if(localStorage.getItem('data') == null){
         localStorage.setItem('data', '[]');
     }
-    console.log('before update',arr);
     arr = arr.filter(e => e !== id);
 
     var localArray = JSON.parse(localStorage.getItem('data'));
     for(let i = 0; i < arr.length; i++){
         localArray.push(arr[i]);
     }
-    console.log('after update',arr)
     localStorage.setItem('data', JSON.stringify(localArray));
 }
 //add eventListener
@@ -116,10 +111,8 @@ function handledClickListener(e){
     const target = e.target;
     if(target.className === 'remove-fev'){
         const id = target.id;
-        // console.log(id);
         removeFevoriteFromArray(id);
         showNotification('Movie delete from your fevourite list...')
-        // setTimeout( reloadPage(),1000);
     }
     if(target.className === 'remove-all'){
         localStorage.removeItem("data");

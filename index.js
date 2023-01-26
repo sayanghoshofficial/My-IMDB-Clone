@@ -92,7 +92,6 @@ function handledClickListener(e){
     // click to add fevourite List
     if(target.className === 'add-fev'){
         const id = target.id;
-        console.log(id);
         saveArrayToLocalStorage(id);
         showNotification('Movie added to your favourite List.......')
        }
@@ -160,6 +159,7 @@ var movieName = ["The Shawshank Redemption","The Godfather","The Dark Knight","T
 //sort names
 let sortNames = movieName.sort();
 movieName = sortNames;
+
 // add key up event listener
 movieInput.addEventListener("keyup",(e)=>{
     //initially remove all element

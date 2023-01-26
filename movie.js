@@ -10,9 +10,7 @@ const headDiv = document.getElementsByClassName('headDiv')
 
 //create url
 function movieDetails(movieId){
-    // console.log('inside moviedetails 116',movieId);
     var url = "http://www.omdbapi.com/?i="+movieId+"&apikey="+apikey;
-    // console.log(url);
     fetchDataFromApiforDetails(url);
     url = ''
 }
@@ -35,7 +33,6 @@ async function fetchDataFromApiforDetails(url){
 }
 //movie page
 function movieDetailsPage(responseData){
-    // console.log('line62 function moviedetails page')
     const heading = document.createElement('p');
     heading.innerHTML = `
         
