@@ -160,7 +160,7 @@ var movieName = ["The Shawshank Redemption","The Godfather","The Dark Knight","T
 "XXX: State of the Union","xXx: Return of Xander Cage","X-Games","Ya Rab","Yaara","Yaariyan","Yaaram","Yaara Silly Silly","Yellow Earth","Yellow Submarine",
 "Young Adam","Young Frankenstein","Y","Yearly Departed","Z","Zatoichi","Zazie Dans le Metro","Zoolander","Zulu","Zaalim","Zila Ghaziabad","Zanjeer",
 "Zero","Zid","Pushpa: The Rise","Pushpa: The Rise","RRR","K.G.F: Chapter 1","K.G.F: Chapter 2","Kantara","Monica, O My Darling","Love Today",
-"Mukundan Unni Associates","Eega","Master","Pathaan","Alita: Battle Angel"]
+"Mukundan Unni Associates","Eega","Master","Pathaan","Alita: Battle Angel","Avengers"]
 //sort names
 let sortNames = movieName.sort();
 movieName = sortNames;
