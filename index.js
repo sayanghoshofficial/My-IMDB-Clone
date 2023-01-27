@@ -8,7 +8,6 @@ const movieBox = document.getElementsByClassName("movie-box");
 const movieContent = document.querySelector(".movie-content");
 const popUp = document.getElementsByClassName('pop-up');
 document.getElementsByClassName("movie-content");
-var flag = true;
 
 
 // Asynchronous function for fetch api's
