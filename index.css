@@ -66,6 +66,10 @@ body{
 .nav-bar > button:hover{
     color: blue;
 }
+.search-icon{
+    width: 10%;
+    height: 70%;
+}
 /* css to suggession list */
 ul{
     list-style: none;

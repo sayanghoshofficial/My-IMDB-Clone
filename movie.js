@@ -53,9 +53,9 @@ function movieDetailsPage(responseData){
             Rated: ${responseData.Rated},
             Runtime: ${responseData.Runtime}
             <p class="ratings"> 
-                <i class="fa-solid fa-star"></i> ${responseData.imdbRating},
-                <i class="fa-solid fa-person-circle-check"></i> ${responseData.imdbVotes},
-                <i class="fa-solid fa-sack-dollar"></i> ${responseData.BoxOffice}
+                IMDB Rating: ${responseData.imdbRating},&nbsp
+                IMDB Votes: ${responseData.imdbVotes},&nbsp
+                Box-Office: ${responseData.BoxOffice}
             </p>
         </span>
         <p>Country: ${responseData.Country}</p>

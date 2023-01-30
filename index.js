@@ -83,9 +83,8 @@ function saveArrayToLocalStorage(id){
 //add eventListener
 function handledClickListener(e){
     const target = e.target;
-    
     // click to Seacrh containt
-    if(target.className =='fa-solid fa-magnifying-glass'){
+    if(target.className =='fa-solid fa-magnifying-glass'|| target.className === 'search-icon'){
         clickToSearch();
         removeElements();
     }
