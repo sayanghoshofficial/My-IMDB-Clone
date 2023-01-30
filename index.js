@@ -83,8 +83,9 @@ function saveArrayToLocalStorage(id){
 //add eventListener
 function handledClickListener(e){
     const target = e.target;
+    console.log(target);
     // click to Seacrh containt
-    if(target.className =='fa-solid fa-magnifying-glass'|| target.className === 'search-icon'){
+    if(target.className ==='search-icon'){
         clickToSearch();
         removeElements();
     }
@@ -101,7 +102,7 @@ function handledClickListener(e){
         
        }
     // click to go to fevourite page
-    if(target.className === 'button'){
+    if(target.className === 'button' || target.className === 'star'){
         window.open("favourite.html", "_blank");
     }
 }

@@ -69,6 +69,7 @@ body{
 .search-icon{
     width: 10%;
     height: 70%;
+    color: white;
 }
 /* css to suggession list */
 ul{
