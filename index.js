@@ -85,7 +85,7 @@ function handledClickListener(e){
     const target = e.target;
     console.log(target);
     // click to Seacrh containt
-    if(target.className ==='search-icon'){
+    if(target.className ==='fa-solid fa-magnifying-glass'){
         clickToSearch();
         removeElements();
     }
